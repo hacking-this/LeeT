@@ -5,8 +5,10 @@ public:
         int i=0;
         int j=height.size()-1;
         while(i<j){
-            // int area=min(height[i],height[j])*(j-i);
-            maxi=max(min(height[i],height[j])*(j-i),maxi);
+            int width=j-i;
+            int high=min(height[i],height[j]);
+            int area=high*width;
+            maxi=max(area,maxi);
             if(height[i] > height[j])
                 j--;
             else
