@@ -1,7 +1,6 @@
 class Solution {
 public:
     int reverse(int x) {
-        int last;
         int temp;
         long long int reverse;
         reverse=0;
