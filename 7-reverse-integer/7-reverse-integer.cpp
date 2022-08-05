@@ -1,8 +1,8 @@
 class Solution {
 public:
     int reverse(int x) {
-        long long int last;
-        long long int temp;
+        int last;
+        int temp;
         long long int reverse;
         reverse=0;
         temp=x;
