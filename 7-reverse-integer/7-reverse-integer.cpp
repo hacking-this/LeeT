@@ -7,9 +7,8 @@ public:
         reverse=0;
         temp=x;
         while(abs(x)>0){
-            last=x%10;
+            reverse=reverse*10+x%10;
             x/=10;
-            reverse=reverse*10+last;
         }
         if(reverse<INT_MIN || reverse>INT_MAX){
             return 0;
