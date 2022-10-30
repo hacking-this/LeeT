@@ -1,23 +1,18 @@
 class Solution {
 public:
     int findContentChildren(vector<int>& g, vector<int>& s) {
-        map<int,int> mp;
-		for(auto &it: s){
-			mp[it]++;
-		}
-		int count=0;
-		for(auto &it: g){
-		 //finding if there exist any cookie greater than or equal to child greed
-			auto itr=mp.lower_bound(it);
-			if(itr!=mp.end()){
-				(*itr).second--;
-				count++;
-				if((*itr).second==0){
-					mp.erase((*itr).first);
-				}
-			}
-		}
-		return count;
-	
+       int len_g = g.size();
+        int len_s = s.size();
+        sort(g.begin(),g.end());
+        sort(s.begin(),s.end());
+        int i = 0,j = 0,ans = 0;
+        while(i < len_g && j < len_s){
+            if (s[j] >= g[i]){ // we alway want s[i] < g[j] , and if ( s[j] >= g[i] ) we get a answer,so we can get next element (cookie) by doing i++.
+                ans++;
+                i++;
+            }
+            j++;
+        }
+        return ans;
     }
 };
