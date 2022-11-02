@@ -1,7 +1,6 @@
 class Solution {
 public:
     int reverse(int x) {
-        int temp = x;
         int last;
         long long int reverse = 0;
         while(abs(x)>0){
