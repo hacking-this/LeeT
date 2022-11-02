@@ -9,11 +9,8 @@ public:
             reverse = reverse*10 + last;
             x/=10;
         }
-         if(reverse<INT_MIN || reverse>INT_MAX){
-            return 0;
-        }if(x>=0){
-            return reverse;
-        }else
-            return -reverse;
+        if(reverse < INT_MIN || reverse > INT_MAX) return 0;
+        if(x>=0) return reverse;
+        else return reverse;
     }
 };
