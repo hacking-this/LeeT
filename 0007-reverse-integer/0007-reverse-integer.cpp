@@ -10,6 +10,6 @@ public:
         }
         if(reverse < INT_MIN || reverse > INT_MAX) return 0;
         if(x>=0) return reverse;
-        else return reverse;
+        else return -reverse;
     }
 };
