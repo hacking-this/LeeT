@@ -20,7 +20,7 @@ public:
 	                
 	            }
 	        }
-	    }int maxi = -1;
+	    }int maxi = INT_MIN;
 	    int ans=-1;
 	    
 	    for(auto x:mpp){
