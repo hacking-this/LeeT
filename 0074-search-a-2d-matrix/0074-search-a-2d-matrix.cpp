@@ -6,13 +6,18 @@ public:
         int i = 0;
         int j = n-1;
         bool flag = false;
-        while(i<m && j>=0){
-            if(matrix[i][j]==target){
-                flag = true;
-                break;
+        while(i<m){
+            int low= 0;
+            int high = n-1;
+            while(low<=high){
+                int mid=(low+high)/2;
+                if(matrix[i][mid]==target){
+                    flag = true;
+                    break;
+                }else if(matrix[i][mid]>target) high=mid-1;
+                else low=mid+1;
             }
-            else if(matrix[i][j]>target) j--;
-            else i++;
+            i++;
         }
         return flag;
     }
