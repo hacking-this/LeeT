@@ -1,7 +1,7 @@
 class Solution {
 public:
     int minEatingSpeed(vector<int>& piles, int H) {
-        int low=1, high=INT_MAX-6, k=0;
+        int low=1, high=1000000000, k=0;
         while(low<=high){
             k = (low+high)/2;
             long long int h=0;
