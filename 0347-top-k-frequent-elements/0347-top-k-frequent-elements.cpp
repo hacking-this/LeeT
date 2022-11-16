@@ -6,7 +6,7 @@ public:
     }
     
     vector<int> topKFrequent(vector<int>& nums, int k) {
-        map<int,int> mpp;
+        unordered_map<int,int> mpp;
         for(int x:nums) mpp[x]++;
         vector<pair<int,int>> a;
         vector<int> ans;
