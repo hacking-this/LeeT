@@ -1,19 +1,12 @@
 class Solution {
 public:
-    int number(int n){
-        int count = 0;
-        while(n>0){
-            n/=10;
-            count++;
-        }
-        return count;
-    }
+
     int findNumbers(vector<int>& nums) {
-        int result = 0;
+        int count = 0;
         for(int i =0; i<nums.size();i++){
-            if(number(nums[i])%2==0){
-                result++;
+            if(nums[i]>=10 && nums[i]<=99 || nums[i]>=1000 && nums[i]<=9999 || nums[i]==100000){
+                count++;
             }
-        }return result;
+        }return count;
     }
 };
