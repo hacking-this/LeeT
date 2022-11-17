@@ -13,7 +13,8 @@ public:
             if(s[i]==' ') continue; 
             
             while(i<s.size() && s[i]!=' ' ) { 
-                word += s[i]; i++;
+                word += s[i]; 
+                i++;
                 }
             
             stack.push(word); 
