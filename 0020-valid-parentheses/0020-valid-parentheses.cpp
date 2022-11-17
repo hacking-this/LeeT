@@ -2,7 +2,7 @@ class Solution {
 public:
     
     //a = st.top(), b=s[i]
-    bool checkValid(char a, char b){
+    bool checkValid(char b, char a){
         return((a=='(' && b==')') || (a=='[' && b==']') || (a=='{' && b=='}'));
     }
     
@@ -12,7 +12,7 @@ public:
             if(s[i]=='(' || s[i]=='{' || s[i]=='[') st.push(s[i]);
             else{
                 if(st.empty()) return false;
-                if(checkValid(st.top(),s[i])) st.pop();
+                if(checkValid(s[i],st.top())) st.pop();
                 else return false;
             }
         }
