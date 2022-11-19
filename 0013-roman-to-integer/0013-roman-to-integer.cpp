@@ -11,7 +11,7 @@ public:
             {'M',1000}
         };
         
-        int sum=mpp[s.back()];
+        int sum=mpp[s[s.length()-1]];
         for(int i=s.length()-2;i>=0;i--){
             if(mpp[s[i]]<mpp[s[i+1]]) sum-=mpp[s[i]];
             else sum+=mpp[s[i]];
