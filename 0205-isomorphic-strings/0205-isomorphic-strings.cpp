@@ -6,7 +6,8 @@ public:
         
         for(int i=0;i<s.length();i++){
             if(mpp1.count(s[i])){
-                if(mpp1[s[i]]!=t[i]) return false;
+                if(mpp1[s[i]]==t[i]) continue;
+                else return false;
             }
             else{
                 if(mpp2.count(t[i])) return false;
